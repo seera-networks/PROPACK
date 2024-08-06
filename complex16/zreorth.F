@@ -2,8 +2,8 @@ c
 c     Rasmus Munk Larsen, Stanford University, 1999, 2004.
 c
 
-      subroutine zreorth(n,k,V,ldv,vnew,normvnew,index,alpha,work,
-     c     iflag)
+      recursive subroutine zreorth(n,k,V,ldv,vnew,normvnew,index,alpha,
+     c  work, iflag)
 c
 c     Orthogonalize the N-vector VNEW against a subset of the columns of
 c     the N-by-K matrix V(1:N,1:K) using iterated classical or modified
@@ -103,7 +103,7 @@ c
 c****************************************************************************
 c
 
-      subroutine zcgs(n,k,V,ldv,vnew,index,work)
+      recursive subroutine zcgs(n,k,V,ldv,vnew,index,work)
 
 c     Block  Gram-Schmidt orthogonalization:
 c     FOR i= 1:l
